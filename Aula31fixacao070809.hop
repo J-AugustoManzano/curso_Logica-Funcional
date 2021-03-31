@@ -1,0 +1,13 @@
+uses Aula27;
+dec div84 : num -> truval;
+dec div84' : num -> truval;
+dec lstdiv84 : num -> list num;
+dec multip_faixa : num # num -> num;
+
+--- div84 n <= if n mod 8 = 4 then true else false;
+
+--- div84' n <= n mod 8 = 4;
+
+--- lstdiv84 n <= comp (faixa (1, n, 1), lambda x => div84 x);
+
+--- multip_faixa (x, y) <= if x > y then 0 else if x = y then y else x * multip_faixa (x + 1, y);

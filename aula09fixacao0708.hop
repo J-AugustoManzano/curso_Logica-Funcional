@@ -1,0 +1,6 @@
+dec dolar : num # num -> num;
+dec squad : num # num -> num;
+
+--- dolar (real, valor) <= real / valor;
+
+--- squad (a, b) <= pow (a, 2) + pow (b, 2);

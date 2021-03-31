@@ -1,0 +1,8 @@
+uses Aula27;
+dec produtolst : list num -> num;
+dec faixa_primo : num # num -> list num;
+
+--- produtolst [] <= 1;
+--- produtolst (x :: xs) <= x * produtolst xs;
+
+--- faixa_primo (n, m) <= comp (faixa (n, m, 1), lambda x => checa_primo x);

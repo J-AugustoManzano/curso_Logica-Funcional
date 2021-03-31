@@ -1,0 +1,13 @@
+uses aula22;
+dec qual_elemento : num # list num -> num;
+dec qual_elemento' : num # list num -> num;
+dec duplique : list num -> list num;
+
+--- qual_elemento (1, x :: xs) <= x;
+--- qual_elemento (n, x :: xs) <= qual_elemento (n - 1, xs);
+
+--- qual_elemento' (1, x :: xs) <= x;
+--- qual_elemento' (n, x :: xs) <= if tamanho xs /= n - 1 then error ("Posicao fora da faixa") else qual_elemento' (n - 1, xs);
+
+--- duplique [] <= [];
+--- duplique (x :: xs) <= x :: x :: duplique xs;

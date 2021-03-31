@@ -1,0 +1,10 @@
+dec pot1 : num # num -> num;
+dec duplo_fat1 : num -> num;
+
+--- pot1 (b, 0) <= 1;
+--- pot1 (b, 1) <= b;
+--- pot1 (b, e) <= b * pot1 (b, e - 1);
+
+--- duplo_fat1 0 <= 1;
+--- duplo_fat1 1 <= 1;
+--- duplo_fat1 n <= n * duplo_fat1 (n - 2);

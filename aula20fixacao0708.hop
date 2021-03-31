@@ -1,0 +1,8 @@
+dec pell : num -> num;
+dec divide : num # num -> num;
+
+--- pell 0 <= 0;
+--- pell 1 <= 1;
+--- pell n <= 2 * pell (n - 1) + pell (n - 2);
+
+--- divide (n, d) <= if n < d then 0 else 1 + divide (n - d, d);

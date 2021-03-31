@@ -1,0 +1,9 @@
+dec mult : num # num -> num;
+dec somat1 : num -> num;
+
+--- mult (m, 0) <= 0;
+--- mult (m, n) <= if n > 0 then m + mult (m, n - 1) else 0 - mult (m, 0 - n);
+
+--- somat1 0 <= 0;
+--- somat1 1 <= 1;
+--- somat1 n <= n + somat1 (n - 1);

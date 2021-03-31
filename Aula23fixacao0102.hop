@@ -1,0 +1,20 @@
+uses aula22;
+dec mostre : list num -> list num;
+dec inverte : list num -> list num;
+dec inverte' : list num -> list num;
+dec inverteAux : list num # list num -> list num;
+dec inverte'' : list num -> list num;
+
+--- mostre [] <= [];
+--- mostre (x :: xs) <= x :: mostre xs;
+
+--- inverte [] <= [];
+--- inverte (x :: xs) <= inverte xs <> [x];
+
+--- inverte' [] <= [];
+--- inverte' xs <= ultimo xs :: inverte' (arranjo xs);
+
+--- inverteAux ([], ys) <= ys;
+--- inverteAux (x :: xs, ys) <= inverteAux (xs, x :: ys);
+
+--- inverte'' xs <= inverteAux (xs, []);

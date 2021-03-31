@@ -1,0 +1,36 @@
+dec lst : num -> list num;
+dec cabeca : list num -> num;
+dec cauda : list num -> list num;
+dec ultimo : list num -> num;
+dec arranjo : list num -> list num;
+dec elem2 : list num -> num;
+dec tamanho : list num -> num;
+dec elempnt : list num -> num;
+
+--- lst 0 <= [];
+--- lst n <= n :: lst (n - 1);
+
+--- cabeca [] <= error ("Lista vazia!");
+--- cabeca (x :: xs) <= x;
+
+--- cauda [] <= error ("Lista vazia!");
+--- cauda (x :: xs) <= xs;
+
+--- ultimo [] <= error ("Lista vazia!");
+--- ultimo ([x]) <= x;
+--- ultimo (x :: xs) <= ultimo xs;
+
+--- arranjo [] <= error ("Lista vazia!");
+--- arranjo ([x]) <= [];
+--- arranjo (x :: xs) <= x :: arranjo xs;
+
+--- elem2 [] <= error ("Lista vazia!");
+--- elem2 ([x]) <= error ("Poucos elementos!");
+--- elem2 (a :: b :: bs) <= b;
+
+--- tamanho [] <= 0;
+--- tamanho (x :: xs) <= 1 + tamanho xs;
+
+--- elempnt [] <= error ("Lista vazia!");
+--- elempnt ([x]) <= error ("Poucos elementos!");
+--- elempnt (x :: xs) <= if tamanho xs = 1 then x else elempnt xs;

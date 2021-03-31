@@ -1,0 +1,8 @@
+dec mdc : num # num -> num;
+dec hanoi1 : num -> num;
+
+--- mdc (a, 0) <= a;
+--- mdc (a, b) <= mdc (b, a mod b);
+
+--- hanoi1 1 <= 1;
+--- hanoi1 (n + 1) <= 1 + 2 * hanoi1 n;

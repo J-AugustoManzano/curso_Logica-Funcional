@@ -1,0 +1,6 @@
+dec min : num # num -> num;
+dec max : num # num -> num;
+
+--- min (x, y) <= if x < y then x else y;
+
+--- max (x, y) <= if x > y then x else y;

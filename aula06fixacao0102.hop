@@ -1,0 +1,6 @@
+dec suc : num -> num;
+dec ant : num -> num;
+
+--- suc x <= x + 1;
+
+--- ant x <= x - 1;

@@ -1,0 +1,7 @@
+uses Aula27, Aula30fixacao0506, Aula33, Aula05;
+dec labundante : num -> list num;
+dec soma_impares : num -> num;
+
+--- labundante n <= filtro (faixa (1, n, 1), lambda x => abundante x);
+
+--- soma_impares n <= reducao (filtro (faixa (1, n, 1), lambda x => impar x), soma, 0);

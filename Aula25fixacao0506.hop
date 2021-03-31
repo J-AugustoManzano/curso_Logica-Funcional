@@ -1,0 +1,8 @@
+dec poe_final : num # list num -> list num;
+dec somalst : list num -> num;
+
+--- poe_final (n, []) <= [n];
+--- poe_final (n, x :: xs) <= x :: poe_final (n, xs);
+
+--- somalst [] <= 0;
+--- somalst (x :: xs) <= x + somalst xs;

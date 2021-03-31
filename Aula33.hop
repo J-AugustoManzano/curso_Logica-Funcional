@@ -1,0 +1,30 @@
+uses Aula10;
+dec mapa : list num # (num -> num) -> list num;
+dec filtro : list num # (num -> truval) -> list num;
+dec reducao : list num # (num # num -> num) # num -> num;
+dec compacta : list num # list num -> list (num # num);
+dec oposto : list num -> list num;
+dec dcp_base : list num # list num # list (num # num) -> list num # list num;
+dec descompacta : list (num # num) -> list num # list num;
+
+--- mapa ([], funcao) <= [];
+--- mapa (x :: xs, funcao) <= funcao x :: mapa (xs, funcao);
+
+--- filtro ([], funcao) <= [];
+--- filtro (x :: xs, funcao) <= if funcao x then x :: filtro (xs, funcao) else filtro (xs, funcao);
+
+--- reducao ([], funcao, n) <= n;
+--- reducao (x :: xs, funcao, n) <= funcao (x, reducao (xs, funcao, n));
+
+--- compacta ([], b) <= [];
+--- compacta (a, []) <= [];
+--- compacta (x :: xs, y :: ys) <= (x, y) :: compacta (xs, ys);
+
+--- oposto [] <= [];
+--- oposto (x :: xs) <= oposto xs <> [x];
+
+--- dcp_base (xs, ys, []) <= (oposto xs, oposto ys);
+--- dcp_base (xs, ys, (x, y) :: zs) <= dcp_base (x :: xs, y :: ys, zs);
+
+--- descompacta [] <= ([], []);
+--- descompacta xs <= dcp_base ([], [], xs);

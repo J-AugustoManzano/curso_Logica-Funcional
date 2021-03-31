@@ -1,0 +1,33 @@
+uses Aula10, Aula22;
+dec faixa : num # num # num -> list num;
+dec comp : list num # (num -> truval) -> list num;
+dec listapot : num # list num -> list num;
+dec multiplo : num # num -> truval;
+dec divisor : num -> list num;
+dec listamult : list num # num -> list num;
+dec divisor2 : num -> list num;
+dec checa_primo : num -> truval;
+dec lprimos : num -> list num;
+
+--- faixa (i, f, p) <= if i > f then [] else i :: faixa (i + p, f, p);
+
+--- comp ([], func) <= [];
+--- comp (x :: xs, func) <= if func x then x :: comp (xs, func) else comp (xs, func);
+
+--- listapot (n, []) <= [];
+--- listapot (n, x :: xs) <= pow (x, n) :: listapot (n, xs);
+
+--- multiplo (n, m) <= if n mod m = 0 then true else false;
+
+--- divisor n <= comp (faixa (1, n, 1), lambda d => multiplo (n, d));
+
+--- listamult ([], n) <= [];
+--- listamult (x :: xs, n) <= if n mod x = 0 then x :: listamult (xs, n) else listamult (xs, n);
+
+--- divisor2 n <= listamult (faixa (1, n, 1), n);
+
+--- checa_primo 1 <= false;
+--- checa_primo 2 <= true;
+--- checa_primo n <= if tamanho (listamult (faixa (2, n - 1, 1), n)) > 0 then false else true;
+
+--- lprimos n <= comp (faixa (1, n, 1), lambda x => checa_primo x);

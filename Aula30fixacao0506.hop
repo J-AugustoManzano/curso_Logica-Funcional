@@ -1,0 +1,7 @@
+uses Aula25fixacao0506, Aula28fixacao0102, Aula27;
+dec amigos : num # num -> truval;
+dec abundante : num -> truval;
+
+--- amigos (x, y) <= somalst (divisores x) - x = y and somalst (divisores y) - y = x;
+
+--- abundante n <= somalst (comp (faixa (1, n + 1, 1), lambda x => multiplo (n, x))) - n > n;

@@ -1,0 +1,6 @@
+dec qsoma : num # num -> num;
+dec cubo : num -> num;
+
+--- qsoma (a, b) <= pow (a + b, 2);
+
+--- cubo x <= pow (x, 3);

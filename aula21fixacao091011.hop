@@ -1,0 +1,23 @@
+dec smbase : num # num -> num;
+dec somat2 : num -> num;
+dec potbs : num # num # num -> num;
+dec pot2 : num # num -> num;
+dec dftbs : num # num -> num;
+dec duplo_fat2 : num -> num;
+
+--- smbase (0, x) <= x;
+--- smbase (n, x) <= smbase (n - 1, n + x);
+
+--- somat2 n <= smbase (n, 0);
+
+--- potbs (b, 0, v) <= v;
+--- potbs (b, 1, v) <= v * b;
+--- potbs (b, e, v) <= potbs (b, e - 1, b * v);
+
+--- pot2 (b, e) <= potbs (b, e, 1);
+
+--- dftbs (0, x) <= x;
+--- dftbs (1, x) <= x;
+--- dftbs (n, x) <= dftbs (n - 2, n * x);
+
+--- duplo_fat2 n <= dftbs (n, 1);

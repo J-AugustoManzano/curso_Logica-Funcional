@@ -1,0 +1,25 @@
+dec fat1 : num -> num;
+dec fib1 : num -> num;
+dec ftbase : num # num -> num;
+dec fat2 : num -> num;
+dec fbs : num # num # num -> num;
+dec fib2 : num -> num;
+
+--- fat1 0 <= 1;
+--- fat1 n <= n * fat1 (n - 1);
+
+--- fib1 0 <= 0;
+--- fib1 1 <= 1;
+--- fib1 n <= fib1 (n - 1) + fib1 (n - 2);
+
+--- ftbase (0, x) <= x;
+--- ftbase (n, x) <= ftbase (n - 1, n * x);
+
+--- fat2 n <= ftbase (n, 1);
+
+--- fbs (0, anter, atual) <= anter;
+--- fbs (1, anter, atual) <= atual;
+--- fbs (2, anter, atual) <= atual + anter;
+--- fbs (n, anter, atual) <= fbs (n - 1, atual, anter + atual);
+
+--- fib2 n <= fbs (n, 0, 1);

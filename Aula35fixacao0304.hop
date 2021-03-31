@@ -1,0 +1,8 @@
+uses Aula10, Aula27, Aula33, Aula05;
+dec quadrados : num # num -> list num;
+dec perfeito : num -> truval;
+
+--- quadrados (n, m) <= mapa (comp (faixa (n, m, 1), lambda x => impar x), lambda x => pow (x, 2));
+
+--- perfeito 0 <= false;
+--- perfeito n <= n = reducao (comp (faixa (1, n - 1, 1), lambda x => multiplo (n, x)), soma, 0);

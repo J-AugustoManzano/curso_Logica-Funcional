@@ -1,0 +1,8 @@
+uses Aula23fixacao0102, Aula27;
+dec poe_ultimo : num # list num -> list num;
+dec divisores : num -> list num;
+
+--- poe_ultimo (n, []) <= [n];
+--- poe_ultimo (n, x :: xs) <= x :: poe_ultimo (n, xs);
+
+--- divisores n <= inverte (comp (faixa (1, n + 1, 1), lambda x => multiplo (n, x)));
